@@ -7,6 +7,13 @@ class IndexView(View):
         return render(request, "app/index.html")
 '''
 
+def index(request):
+    context={
+        'hamonuedaimei':'test_index',
+        'hamonuedaimeisita':'???',
+    }
+    return render(request, 'app/index.html',context)
+
 def base(request):
     context={
         'hamonuedaimei':'ベース',
